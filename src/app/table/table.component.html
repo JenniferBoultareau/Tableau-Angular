@@ -1,18 +1,21 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>Ville</th>
-      <th>Pays</th>
-      <th>Population</th>
-      <th>Superficie</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let city of cities">
-      <td>{{ city.city }}</td>
-      <td>{{ city.country }}</td>
-      <td>{{ city.population }}</td>
-      <td>{{ city.area }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Ville</th>
+        <th>Pays</th>
+        <th>Population</th>
+        <th>Superficie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let city of cities">
+        <td>{{ city.city }}</td>
+        <td>{{ city.country }}</td>
+        <td>{{ city.population }}</td>
+        <td>{{ city.area }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
