@@ -7,11 +7,11 @@ import { City } from '../models/city';
   providedIn: 'root'
 })
 export class TableService {
-  private _url: string = "/assets/data/city.json";
+  private url: string = "/assets/data/city.json";
 
   constructor(private http: HttpClient) { }
 
   getcities(): Observable<City[]> {
-    return this.http.get<City[]>(this._url);
+    return this.http.get<City[]>(this.url);
   }
 }

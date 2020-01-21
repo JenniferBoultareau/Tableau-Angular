@@ -10,10 +10,10 @@ export class TableComponent implements OnInit {
 
   public cities = [];
 
-  constructor( private _tableService: TableService) { }
+  constructor( private tableService: TableService) { }
 
   ngOnInit() {
-    this._tableService.getcities().subscribe(data => (this.cities = data));
+    this.tableService.getcities().subscribe(data => (this.cities = data));
   }
 
 }
