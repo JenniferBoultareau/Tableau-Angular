@@ -1,0 +1,26 @@
+[
+  {
+    "city": "Copenhague",
+    "country": "Danemark",
+    "population": 623404,
+    "area": 88
+  },
+  {
+    "city": "Paris",
+    "country": "France",
+    "population": 2187526,
+    "area": 105
+  },
+  {
+    "city": "Londres",
+    "country": "Royaume-Uni",
+    "population": 8908081,
+    "area": 1572
+  },
+  {
+    "city": "Madrid",
+    "country": "Espagne",
+    "population": 3266126,
+    "area": 608
+  }
+]
