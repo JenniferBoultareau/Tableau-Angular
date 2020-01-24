@@ -8,10 +8,16 @@ import { City } from '../models/city';
 })
 export class TableService {
   private url: string = "/assets/data/city.json";
+  private cities: City[];
 
   constructor(private http: HttpClient) { }
 
   getcities(): Observable<City[]> {
     return this.http.get<City[]>(this.url);
+  }
+
+  addCities(city: City) {
+    this.cities.push(city);
+    this.getcities();
   }
 }
