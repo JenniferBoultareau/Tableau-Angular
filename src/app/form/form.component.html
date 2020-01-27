@@ -1,5 +1,5 @@
 <div class="container">
-  <form [formGroup]="cityForm" (ngSubmit)="onSubmitForm">
+  <form [formGroup]="cityForm" (ngSubmit)="onSubmitForm()">
     <div class="form-group">
       <label for="city" class="label">Ville</label>
       <div class="control">
@@ -28,7 +28,9 @@
       </div>
     </div>
 
-    <button type="submit" class="button is-primary">Envoyer</button>
+    <div class="form-group">
+      <button type="submit" class="button is-primary">Envoyer</button>
+    </div>
   </form>
 </div>
 

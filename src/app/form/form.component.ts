@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  cityForm: FormGroup
+  cityForm: FormGroup;
+
+  public cities = [];
 
   constructor(private formBuilder: FormBuilder,
               private tableService: TableService,
@@ -32,15 +34,18 @@ export class FormComponent implements OnInit {
 
   onSubmitForm() {
     const formValue = this.cityForm.value;
-    // const newCity = new City(
-    //   formValue['city'],
-    //   formValue['country'],
-    //   formValue['population'],
-    //   formValue['area']
-    // );
-    // this.tableService.addCities(newCity);
-    // this.router.navigate(['/home']);
-    console.log(formValue)
+    const newCity = new City(
+      formValue['id'],
+      formValue['city'],
+      formValue['country'],
+      formValue['population'],
+      formValue['area']
+      );
+      console.log(newCity);
+    this.tableService.addCities(newCity).subscribe(city => {this.cities.push(city)})
+    this.router.navigate(['']);
   }
 
 }
+
+
